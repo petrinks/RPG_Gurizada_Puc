@@ -1,42 +1,37 @@
 package ClassesPlayer;
 
-
 import java.util.Scanner;
 
-public class Mago {
+public class Guerreiro {
     private String nome;
     protected String especialidade;
-    protected int forca = 70;
-    protected int inteligencia = 200;
-    protected int vida = 100;
-    protected int destreza = 20;
+    protected int forca = 200;
+    protected int inteligencia = 50;
+    protected int vida = 200;
+    protected int destreza = 100;
 
-        //Construtor para poder criar uma nova instancia do Mago
-    public Mago(String nomePlayer) {
+        //Construtor para poder criar uma nova instancia do Guerreiro
+    public Guerreiro(String nomePlayer) {
             Scanner sc = new Scanner(System.in);
             this.nome = nomePlayer;
 
-            System.out.println(String.format("\nSelecione o elemento do mago %s:\n", nomePlayer));
-            System.out.println("1. Fogo");
-            System.out.println("2. Água");
-            System.out.println("3. Terra");
-            System.out.println("4. Ar");
+            System.out.println(String.format("\nSelecione o especialidade do guerreiro %s:\n", nomePlayer));
+            System.out.println("1. Tanque de batalha");
+            System.out.println("2. Duelista");
+            System.out.println("3. Espadachin");
 
             int escolha = sc.nextInt();
 
 
             switch (escolha) {
                 case 1:
-                    this.especialidade = "Fogo";
+                    this.especialidade = "Tanque de batalha";
                     break;
                 case 2:
-                    this.especialidade = "Água";
+                    this.especialidade = "Duelista";
                     break;
                 case 3:
-                    this.especialidade = "Terra";
-                    break;
-                case 4:
-                    this.especialidade = "Ar";
+                    this.especialidade = "Espadachin";
                     break;
             
                 default:
@@ -46,10 +41,10 @@ public class Mago {
 
             System.out.println("\nSeus atributos atuais:");
             System.out.println("\nNome: " + nome);
-            System.out.println("Elemento: " + especialidade);
+            System.out.println("especialidade: " + especialidade);
             System.out.println("Força: " + forca);
             System.out.println("Inteligencia: " + inteligencia);
-            System.out.println("Vida: " + vida);
+            System.out.println("Vidas: " + vida);
             System.out.println("Destreza: " + destreza);
 
             sc.close();
@@ -60,10 +55,10 @@ public class Mago {
         // Metodo que mostra os Status do
     public void imprimirStatus() {
         System.out.println("\nNome: " + nome);
-        System.out.println("Elemento: " + especialidade);
+        System.out.println("especialidade: " + especialidade);
         System.out.println("Força: " + forca);
         System.out.println("Inteligencia: " + inteligencia);
-        System.out.println("Vidas: " + vida);
+        System.out.println("Vida: " + vida);
         System.out.println("Destreza: " + destreza);
     }
     

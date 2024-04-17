@@ -1,44 +1,39 @@
 package ClassesPlayer;
 
-
 import java.util.Scanner;
 
-public class Mago {
+public class Ladrao {
     private String nome;
     protected String especialidade;
-    protected int forca = 70;
-    protected int inteligencia = 200;
-    protected int vida = 100;
-    protected int destreza = 20;
+    protected int forca = 80;
+    protected int inteligencia = 120;
+    protected int vida = 120;
+    protected int destreza = 200;
 
         //Construtor para poder criar uma nova instancia do Mago
-    public Mago(String nomePlayer) {
+    public Ladrao(String nomePlayer) {
             Scanner sc = new Scanner(System.in);
             this.nome = nomePlayer;
 
-            System.out.println(String.format("\nSelecione o elemento do mago %s:\n", nomePlayer));
-            System.out.println("1. Fogo");
-            System.out.println("2. Água");
-            System.out.println("3. Terra");
-            System.out.println("4. Ar");
+            System.out.println(String.format("\nSelecione o especialidade do ladrao %s:\n", nomePlayer));
+            System.out.println("1. Ladrão das Sombras");
+            System.out.println("2. Ladrão das Máscaras"); // se passa por pessoas ou monstros
+            System.out.println("3. Mestre das cartas marcadas"); // Negocia com vendedores
 
             int escolha = sc.nextInt();
 
 
             switch (escolha) {
                 case 1:
-                    this.especialidade = "Fogo";
+                    this.especialidade = "Ladrão das Sombras";
                     break;
                 case 2:
-                    this.especialidade = "Água";
+                    this.especialidade = "Ladrão das Máscaras";
                     break;
                 case 3:
-                    this.especialidade = "Terra";
+                    this.especialidade = "Mestre das cartas marcadas";
                     break;
-                case 4:
-                    this.especialidade = "Ar";
-                    break;
-            
+                    
                 default:
                     System.out.println("Escolha uma classe valida!\n");
                     break;
@@ -46,7 +41,7 @@ public class Mago {
 
             System.out.println("\nSeus atributos atuais:");
             System.out.println("\nNome: " + nome);
-            System.out.println("Elemento: " + especialidade);
+            System.out.println("especialidade: " + especialidade);
             System.out.println("Força: " + forca);
             System.out.println("Inteligencia: " + inteligencia);
             System.out.println("Vida: " + vida);
@@ -60,7 +55,7 @@ public class Mago {
         // Metodo que mostra os Status do
     public void imprimirStatus() {
         System.out.println("\nNome: " + nome);
-        System.out.println("Elemento: " + especialidade);
+        System.out.println("especialidade: " + especialidade);
         System.out.println("Força: " + forca);
         System.out.println("Inteligencia: " + inteligencia);
         System.out.println("Vidas: " + vida);

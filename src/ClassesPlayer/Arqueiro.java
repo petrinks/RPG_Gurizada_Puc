@@ -1,46 +1,41 @@
 package ClassesPlayer;
 
-
 import java.util.Scanner;
 
-public class Mago {
+public class Arqueiro {
     private String nome;
     protected String especialidade;
-    protected int forca = 70;
-    protected int inteligencia = 200;
-    protected int vida = 100;
-    protected int destreza = 20;
+    protected int forca = 100;
+    protected int inteligencia = 50;
+    protected int vida = 120;
+    protected int destreza = 150;
 
         //Construtor para poder criar uma nova instancia do Mago
-    public Mago(String nomePlayer) {
+    public Arqueiro(String nomePlayer) {
             Scanner sc = new Scanner(System.in);
             this.nome = nomePlayer;
 
-            System.out.println(String.format("\nSelecione o elemento do mago %s:\n", nomePlayer));
-            System.out.println("1. Fogo");
-            System.out.println("2. Água");
-            System.out.println("3. Terra");
-            System.out.println("4. Ar");
+            System.out.println(String.format("\nSelecione a especialidade do arqueiro %s:\n", nomePlayer));
+            System.out.println("1. Furtividade");
+            System.out.println("2. Atirador de longo alcance");
+            System.out.println("3. Arqueiro de precisao");
 
             int escolha = sc.nextInt();
 
 
             switch (escolha) {
                 case 1:
-                    this.especialidade = "Fogo";
+                    this.especialidade = "Furtividade";
                     break;
                 case 2:
-                    this.especialidade = "Água";
+                    this.especialidade = "Atirador de longo alcance";
                     break;
                 case 3:
-                    this.especialidade = "Terra";
-                    break;
-                case 4:
-                    this.especialidade = "Ar";
+                    this.especialidade = "Arqueiro de precisaos";
                     break;
             
                 default:
-                    System.out.println("Escolha uma classe valida!\n");
+                System.out.println("Escolha uma classe valida!\n");
                     break;
             }
 
@@ -66,5 +61,4 @@ public class Mago {
         System.out.println("Vidas: " + vida);
         System.out.println("Destreza: " + destreza);
     }
-    
 }
