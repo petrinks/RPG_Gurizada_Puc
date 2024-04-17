@@ -14,30 +14,33 @@ public class Guerreiro {
     public Guerreiro(String nomePlayer) {
             Scanner sc = new Scanner(System.in);
             this.nome = nomePlayer;
+            int escolha;
 
-            System.out.println(String.format("\nSelecione o especialidade do guerreiro %s:\n", nomePlayer));
-            System.out.println("1. Tanque de batalha");
-            System.out.println("2. Duelista");
-            System.out.println("3. Espadachin");
+            do {
+                System.out.println(String.format("\nSelecione o especialidade do guerreiro %s:\n", nomePlayer));
+                System.out.println("1. Tanque de batalha");
+                System.out.println("2. Duelista");
+                System.out.println("3. Espadachin");
 
-            int escolha = sc.nextInt();
+                escolha = sc.nextInt();
 
 
-            switch (escolha) {
-                case 1:
-                    this.especialidade = "Tanque de batalha";
-                    break;
-                case 2:
-                    this.especialidade = "Duelista";
-                    break;
-                case 3:
-                    this.especialidade = "Espadachin";
-                    break;
-            
-                default:
-                    System.out.println("Escolha uma classe valida!\n");
-                    break;
-            }
+                switch (escolha) {
+                    case 1:
+                        this.especialidade = "Tanque de batalha";
+                        break;
+                    case 2:
+                        this.especialidade = "Duelista";
+                        break;
+                    case 3:
+                        this.especialidade = "Espadachin";
+                        break;
+                
+                    default:
+                        System.out.println("Escolha uma classe valida!\n");
+                        break;
+                }
+            } while (escolha >= 3);
 
             System.out.println("\nSeus atributos atuais:");
             System.out.println("\nNome: " + nome);

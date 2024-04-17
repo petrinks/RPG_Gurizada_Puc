@@ -15,34 +15,37 @@ public class Mago {
     public Mago(String nomePlayer) {
             Scanner sc = new Scanner(System.in);
             this.nome = nomePlayer;
-
-            System.out.println(String.format("\nSelecione o elemento do mago %s:\n", nomePlayer));
-            System.out.println("1. Fogo");
-            System.out.println("2. Água");
-            System.out.println("3. Terra");
-            System.out.println("4. Ar");
-
-            int escolha = sc.nextInt();
-
-
-            switch (escolha) {
-                case 1:
-                    this.especialidade = "Fogo";
-                    break;
-                case 2:
-                    this.especialidade = "Água";
-                    break;
-                case 3:
-                    this.especialidade = "Terra";
-                    break;
-                case 4:
-                    this.especialidade = "Ar";
-                    break;
-            
-                default:
-                    System.out.println("Escolha uma classe valida!\n");
-                    break;
-            }
+            int escolha;
+            do {
+                
+                System.out.println(String.format("\nSelecione o elemento do mago %s:\n", nomePlayer));
+                System.out.println("1. Fogo");
+                System.out.println("2. Água");
+                System.out.println("3. Terra");
+                System.out.println("4. Ar");
+    
+                escolha = sc.nextInt();
+    
+                
+                switch (escolha) {
+                    case 1:
+                        this.especialidade = "Fogo";
+                        break;
+                    case 2:
+                        this.especialidade = "Água";
+                        break;
+                    case 3:
+                        this.especialidade = "Terra";
+                        break;
+                    case 4:
+                        this.especialidade = "Ar";
+                        break;
+                
+                    default:
+                        System.out.println("Escolha uma classe valida!\n");
+                        break;
+                }
+            } while (escolha >= 4);
 
             System.out.println("\nSeus atributos atuais:");
             System.out.println("\nNome: " + nome);

@@ -14,13 +14,15 @@ public class Ladrao {
     public Ladrao(String nomePlayer) {
             Scanner sc = new Scanner(System.in);
             this.nome = nomePlayer;
+            int escolha;
 
+           do {
             System.out.println(String.format("\nSelecione o especialidade do ladrao %s:\n", nomePlayer));
             System.out.println("1. Ladrão das Sombras");
             System.out.println("2. Ladrão das Máscaras"); // se passa por pessoas ou monstros
             System.out.println("3. Mestre das cartas marcadas"); // Negocia com vendedores
 
-            int escolha = sc.nextInt();
+            escolha = sc.nextInt();
 
 
             switch (escolha) {
@@ -38,6 +40,7 @@ public class Ladrao {
                     System.out.println("Escolha uma classe valida!\n");
                     break;
             }
+           } while (escolha >= 3);
 
             System.out.println("\nSeus atributos atuais:");
             System.out.println("\nNome: " + nome);

@@ -14,30 +14,34 @@ public class Arqueiro {
     public Arqueiro(String nomePlayer) {
             Scanner sc = new Scanner(System.in);
             this.nome = nomePlayer;
+            int escolha;
 
-            System.out.println(String.format("\nSelecione a especialidade do arqueiro %s:\n", nomePlayer));
-            System.out.println("1. Furtividade");
-            System.out.println("2. Atirador de longo alcance");
-            System.out.println("3. Arqueiro de precisao");
+            do {
+                System.out.println(String.format("\nSelecione a especialidade do arqueiro %s:\n", nomePlayer));
+                System.out.println("1. Furtividade");
+                System.out.println("2. Atirador de longo alcance");
+                System.out.println("3. Arqueiro de precisao");
+    
+                escolha = sc.nextInt();
+    
+    
+                switch (escolha) {
+                    case 1:
+                        this.especialidade = "Furtividade";
+                        break;
+                    case 2:
+                        this.especialidade = "Atirador de longo alcance";
+                        break;
+                    case 3:
+                        this.especialidade = "Arqueiro de precisaos";
+                        break;
+                
+                    default:
+                    System.out.println("Escolha uma classe valida!\n");
+                        break;
+                }
+            } while (escolha >= 3);
 
-            int escolha = sc.nextInt();
-
-
-            switch (escolha) {
-                case 1:
-                    this.especialidade = "Furtividade";
-                    break;
-                case 2:
-                    this.especialidade = "Atirador de longo alcance";
-                    break;
-                case 3:
-                    this.especialidade = "Arqueiro de precisaos";
-                    break;
-            
-                default:
-                System.out.println("Escolha uma classe valida!\n");
-                    break;
-            }
 
             System.out.println("\nSeus atributos atuais:");
             System.out.println("\nNome: " + nome);

@@ -14,30 +14,33 @@ public class Clerigo {
     public Clerigo(String nomePlayer) {
             Scanner sc = new Scanner(System.in);
             this.nome = nomePlayer;
+            int escolha;
 
-            System.out.println(String.format("\nSelecione o especialidade do clerigo %s:\n", nomePlayer));
-            System.out.println("1. Curandeiro");
-            System.out.println("2. Missionario Divino"); // vantagem em cidades com religiao
-            System.out.println("3. Exorcista");
-
-            int escolha = sc.nextInt();
-
-
-            switch (escolha) {
-                case 1:
-                    this.especialidade = "Curandeiro";
-                    break;
-                case 2:
-                    this.especialidade = "Missionario Divino";
-                    break;
-                case 3:
-                    this.especialidade = "Exorcista";
-                    break;
-            
-                default:
-                System.out.println("Escolha uma classe valida!\n");
-                    break;
-            }
+            do {
+                System.out.println(String.format("\nSelecione o especialidade do clerigo %s:\n", nomePlayer));
+                System.out.println("1. Curandeiro");
+                System.out.println("2. Missionario Divino"); // vantagem em cidades com religiao
+                System.out.println("3. Exorcista");
+    
+                escolha = sc.nextInt();
+    
+    
+                switch (escolha) {
+                    case 1:
+                        this.especialidade = "Curandeiro";
+                        break;
+                    case 2:
+                        this.especialidade = "Missionario Divino";
+                        break;
+                    case 3:
+                        this.especialidade = "Exorcista";
+                        break;
+                
+                    default:
+                    System.out.println("Escolha uma classe valida!\n");
+                        break;
+                }
+            } while (escolha >= 3);
 
             System.out.println("\nSeus atributos atuais:");
             System.out.println("\nNome: " + nome);
