@@ -1,0 +1,35 @@
+public class Slime{
+    public static int Slime( int Inimigos[][] ){
+        int vida,força,destreza,armadura;
+        vida = 30;
+        força = 2;
+        destreza = 1;
+        armadura = 1;
+        int ataque = força;
+        
+        int Estica,EstilengueElastico,DivisãoCelular,AtaqueB;
+        AtaqueB = força;// ataque Basico
+        DivisãoCelular = 2 + vida; // passiva
+        Estica = força * 2;//habilidade 1
+        EstilengueElastico = força * 3;//habilidade 2
+        
+        int ação = 0;
+        
+        
+        while(vida > 0){
+            DivisãoCelular++;
+        }
+        for(int i = 0;i >= 0; i++){
+            ação++;
+            switch(ação){
+                case 1: ação = 1; ação = força;return ataque; break;
+                case 2: ação = 2; ação = Estica;return ataque; break;
+                case 3: ação = 3; ação = EstilengueElastico;return ataque; break;
+                default:
+            }
+        }
+        if(vida <= 0){
+            System.out.println("inimigo derrotado");
+        }
+    }
+}
