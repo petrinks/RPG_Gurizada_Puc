@@ -1,0 +1,76 @@
+//loot batalhas
+import java.util.Scanner;
+import java.util.Random;
+public class Loot{
+public static void main(String[] args){
+    if (dificuldade==loot){ //inimigo dropa loot quando morre (vida<=0);
+    xp+ = loot/level;//ja vai estar declarada
+    dinheiro+ = loot*2;//ja vai estar declarada
+    int sorte = carisma;
+    Random random = new Random();
+    int raridade=random.nextInt(loot+1)+sorte;
+    while(raridade>=100){
+        int item= random.nextInt(ni);
+        for (int i =0;i<5;++i){
+            System.out.println("Mitico Status: "Itens[item][i]);
+            }
+        raridade-=100;
+    }
+    while(raridade<100 && raidade>90){
+        for (int i =0;i<5;++i){
+            System.out.println("Mitico Status: "Itens[random.nextInt(ni)][i]);
+            }
+        raridade-=90;
+    }
+  }
+}
+
+
+//inimigos na batalha
+import java.util.Scanner;
+import java.util.Random;
+public class Batalha{
+    public static void main(String[] args) {
+        Random random = new Random();
+        int comum[][]={{1,2,3,4,5},{1,2,3,4,5}};
+        int raro[][] = {{2,4,6,8,10},{2,4,6,8,10}};
+        int epico[][] = {{2,4,6,8,10},{2,4,6,8,10}};
+        int lendario[][] = {{10,4,6,8,10},{20,4,6,8,10}};
+        int especial[][]= {{2,4,6,8,10,2},{2,4,6,8,10,2}};
+        int dificuldade=11;
+        while(dificuldade>10){
+            int inimigo= random.nextInt(2);
+            for(int i =0;i<5;++i){
+            System.out.print("lendario status: ")
+            System.out.print(" "lendario[inimigo][i]);
+            }
+            dificuldade-=10;
+            System.out.println("dificuldade"+dificuldade);
+        }
+        while(dificuldade>5){
+            int inimigo= random.nextInt(2);
+            for (int i =0;i<5;++i){
+            System.out.println("epico: "+epico[inimigo][i]);
+            }
+            dificuldade-=5;
+            System.out.println("dificuldade"+dificuldade);
+        }
+        while(dificuldade>2){
+            int inimigo= random.nextInt(2);
+            for (int i =0;i<5;++i){
+            System.out.println("raro: "+raro[inimigo][i]);
+            }
+            dificuldade-=2;
+            System.out.println("dificuldade"+dificuldade);
+        }
+        while(dificuldade>1){
+            int inimigo= random.nextInt(2);
+            for (int i =0;i<5;++i){
+            System.out.println("comum: "+comum[inimigo][i]);
+            }
+            dificuldade-=1;
+            System.out.println("dificuldade"+dificuldade);
+        }
+    }
+}
+
